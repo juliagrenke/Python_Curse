@@ -7,22 +7,22 @@
 # 3
 # -> 1
 
-# from random import randint as rd
+from random import randint as rd
 
-# n = int(input("Введите количество элементов массива: "))
-# numbers = list()
-# for i in range(n):
-#     numbers.append(rd(1, 51))
-# print(numbers)
+n = int(input("Введите количество элементов массива: "))
+numbers = list()
+for i in range(n):
+    numbers.append(rd(1, 51))
+print(numbers)
 
-# x = int(input("Введите число для поиска: "))
-# count = 0
-# for i in range(len(numbers)): 
-#     if numbers[i] == x:
-#         count += 1
-#         i += 1
+x = int(input("Введите число для поиска: "))
+count = 0
+for i in range(len(numbers)):
+    if numbers[i] == x:
+        count += 1
+        i += 1
 
-# print(count)
+print(count)
 
 
 # Задача 18: Требуется найти в массиве A[N] самый близкий по величине элемент к заданному числу X.
@@ -34,27 +34,27 @@
 #   6
 #   -> 5
 
-# from random import randint as rd
+from random import randint as rd
 
-# n = int(input("Введите количество элементов массива: "))
-# numbers = list()
-# for i in range(n):
-#     numbers.append(rd(1, 51))
-# print(numbers)
+n = int(input("Введите количество элементов массива: "))
+numbers = list()
+for i in range(n):
+    numbers.append(rd(1, 51))
+print(numbers)
 
-# x = int(input("Введите число: "))
-# dif_min = abs(numbers[0] - x)
-# dif = 0
-# for i in range(len(numbers)): 
-#     a = abs(numbers[i]-x)
-#     if a < dif_min:
-#         dif_min = a
-#         dif = numbers[i]
-#         i += 1
+x = int(input("Введите число: "))
+dif_min = abs(numbers[0] - x)
+dif = 0
+for i in range(len(numbers)):
+    a = abs(numbers[i]-x)
+    if a < dif_min:
+        dif_min = a
+        dif = numbers[i]
+        i += 1
 
-# print(dif)
+print(dif)
 
- 
+
 # Задача 20: В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность.
 # В случае с английским алфавитом очки распределяются так:
 # A, E, I, O, U, L, N, S, T, R – 1 очко; D, G – 2 очка; B, C, M, P – 3 очка; F, H, V, W, Y – 4 очка;
@@ -68,3 +68,20 @@
 # ноутбук
 #     12
 
+
+dict = {
+    1: "AEIOULNSTRАВЕИНОРСТ",
+    2: "DGДКЛМПУ",
+    3: "BCMPБГЁЬЯ",
+    4: "FHVWYЙЫ",
+    5: "KЖЗХЦЧ",
+    8: "JXШЭЮ",
+    10: "QZФЩЪ",
+}
+word = input("Введите слово: ").upper()
+sum = 0
+for i in word:
+    for key, value in dict.items():
+        if i in value:
+            sum += key
+print(f'Стоимость слова = {sum}')

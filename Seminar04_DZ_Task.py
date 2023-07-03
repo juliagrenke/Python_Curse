@@ -53,7 +53,7 @@ print(harvest)
 
 max_harvest = harvest[0]
 
-for i in range(0, n):
+for i in range(n):
     x = harvest[i] + harvest[i + 1 - n] + harvest[i + 2 - n]
     print(x)
     if x < max_harvest:

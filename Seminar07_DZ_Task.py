@@ -9,18 +9,18 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
 # **Вывод:** Парам пам-пам
 
-# def count_liter(string1):
-#     transformed_str = string1.lower().split()
-#     print(transformed_str)
-#     col = lambda x: sum(1 for i in x if i in "уеёэоаыяию")
-#     count = col(transformed_str[0])
-#     print (count)
-#     if all([col(i) == count for i in transformed_str]):
-#         return "Парам пам-пам"
-#     return "Пам парам"
+def count_liter(string1):
+    transformed_str = string1.lower().split()
+    print(transformed_str)
+    col = lambda x: sum(1 for i in x if i in "уеёэоаыяию")
+    count = col(transformed_str[0])
+    print (count)
+    if all([col(i) == count for i in transformed_str]):
+        return "Парам пам-пам"
+    return "Пам парам"
 
 
-# print(count_liter("пара-ра-рам рам-пам-папам па-ра-па-да"))
+print(count_liter("пара-ра-рам рам-пам-папам па-ра-па-да"))
 
 
 # Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
